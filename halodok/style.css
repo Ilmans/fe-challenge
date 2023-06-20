@@ -1,0 +1,265 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,600;1,700&family=Source+Sans+3:wght@200;400;500;700&display=swap');
+* {
+  margin : 0;
+  padding : 0;
+  text-decoration: none;
+  list-style: none;
+  
+}
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+.container {
+  margin: 25px 70px;
+}
+
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-columns:1fr 2fr 1fr;
+}
+.header .icon {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  text-align: center;
+  color: black;
+  font-size: 12px;
+}
+.header .auth {
+ display: flex;
+ justify-content: end;
+ gap: 0 15px;
+ z-index: 999;
+}
+
+li {
+  display: inline-block;
+}
+li a {
+  padding: 10px 32px;
+  color: #626060;
+}
+li a:hover {
+  font-weight: 700;
+}
+
+/* button */
+.btn {
+  padding: 10px 25px;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-weight: 500;
+}
+.btn.bordered {
+  border: 1px solid ;
+}
+
+/* hero area */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.left {
+  width: 40%;
+  display: flex;
+  font-family: 'DM Sans', sans-serif;
+  gap: 10px 0;
+  flex-direction: column;
+}
+.left h2{
+  font-weight: 500;
+  font-size: 3.5em;
+ line-height: 1;
+}
+.left p {
+  font-weight:300;
+  width: 300;
+  line-height: 2;
+}
+.left .btn-book {
+  width: 200px;
+  background-color: #203271;
+  color: white;
+  padding: 20px 0;;
+}
+
+.right {
+  margin-top: -50px;
+  background-color: #9BEAE0;
+  transform: skewX(-10deg);
+  z-index: -999;
+  
+}
+.right img {
+  display: inline-block;
+  transform: skewX(10deg);
+}
+
+.hero .pop {
+  position: absolute;
+  width: 300px;
+  left: 45%;
+  top: 30%;
+}
+
+.pop {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.person {
+  display: grid;
+  grid-template-columns: 40px 1fr 50px;
+  align-items: center;
+}
+.person h1 {
+  font-size: 20px;
+}
+.pop p {
+  margin: 10px 0;
+  font-weight: 200;
+  color: #333;
+}
+
+/* infos */
+.infos {
+  z-index: 9999;
+  margin-top: -20px;
+  padding: 50px;
+    background-color: #203271;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infos .info {
+  width: 300px;
+  display: flex;
+  align-items: start;
+  gap: 0 10px;
+}
+.desc p:last-of-type {
+  margin-top: 5px;
+  font-weight: 200;
+}
+
+.close-icon,.hamburger {
+  display: none;
+}
+
+@media (max-width : 1024px) {
+
+  /* nav */
+  .hamburger {
+    display: block;
+  }
+  .header {
+    display: flex;
+   
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #9BEAE0;
+
+  }
+  
+    .nav {
+      position: fixed;
+      transform: translateX(0);
+      transition: transform 0.3s ease;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      background-color: white;
+      z-index: 99999;
+     
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .nav.hide {
+     transform: translateX(-120%);
+       transition: transform 0.3s ease;
+    }
+    
+    ul li {
+      display: block;
+      width: 100%;
+      text-align: start;
+      padding: 20px 10px;
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+    .close-icon {
+      width: 100%;
+     display: flex;
+     justify-content: end;
+      padding: 20px;
+      background-color: white;
+      border-radius: 20px;
+      cursor: pointer;
+
+    }
+    .close-icon:hover {
+      font-weight: 700;
+    }
+    .hamburger {
+      color: black;
+      width: 30px;
+      background-color: transparent;
+      border: none;
+
+    }
+    .auth .btn.bordered {
+      display: none;
+    }
+  /* end nav */
+  .container {
+    margin: 10px;
+  }
+  .hero {
+    padding: 30px 10px;
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   margin: 50px;
+  }
+  .right {
+    margin-top: 5px;
+    transform: skewX(0deg);
+    width: 100%;
+  }
+  .right img {
+    transform: skewX(0deg);
+  }
+  .hero .pop {
+    top: 60%;
+    left: 0%;
+  }
+  .infos {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+  }
+  .info {
+    width: 100%;
+  }
+}

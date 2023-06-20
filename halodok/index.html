@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Halodok</title>
+  
+</head>
+<body>
+  <div class="container">
+     <header class="header">
+        <div class="icon">
+          <img src="img/icon.svg" alt="">
+          <h1>Holadok</h1>
+        </div>
+        <ul class="nav hide">
+          <div class="close-icon">
+            <p>X</p>
+          </div>
+          <li><a href="">Home</a></li>
+          <li><a href="">Features</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">About Us</a></li>
+
+        </ul>
+        <div class="auth">
+          <button class="btn">Login</button>
+          <button class="btn bordered">Register</button>
+         <button class="hamburger ">
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+         </button>
+
+        </div>
+     </header>
+     <div class="hero">
+      <div class="left">
+        <h2>
+          Get the healthcare you need, when you need it.
+        </h2>
+        <p>
+          Manage all of your healthcare needs in one convenient place – from booking appointments to tracking your health history.
+        </p>
+        <button class="btn btn-book">
+          Book An Appointment
+        </button>
+      </div>
+      <div class="right">
+          <img src="img/main.png" alt="">
+      </div>
+      <div class="pop">
+        <div class="person">
+          <img src="img/profile.png" alt="">
+          <h1>Jane Doe</h1>
+          <img src="img/quote.svg" alt="">
+        </div>
+        <p>
+          “The doctor appointment app has been great for me. Scheduling appointments and getting medication reminders is much easier, and I love the option for virtual consultations. I'd recommend this app to others.”
+        </p>
+      </div>
+     </div>
+     <div class="infos">
+        <div class="info">
+          <img src="img/info1.svg" alt="">
+          <div class="desc">
+            <p class="title">
+              Online appointment scheduling
+            </p>
+            <p>
+              Allows users to schedule appointments with their healthcare provider through the app.
+            </p>
+          </div>
+        </div>
+        <div class="info">
+          <img src="img/info2.svg" alt="">
+         <div class="desc">
+            <p class="title">
+              Medication reminders
+            </p>
+            <p>
+             Allows users to schedule appointments with their healthcare provider through the app.
+            </p>
+          </div>
+        </div>
+        <div class="info">
+          <img src="img/info1.svg" alt="">
+          <div class="desc">
+            <p class="title">
+              Online appointment scheduling
+            </p>
+            <p>
+              Allows users to schedule appointments with their healthcare provider through the app.
+            </p>
+          </div>
+        </div>
+     </div>
+  </div>
+
+  <script>
+    let hamburger = document.querySelector(".hamburger")
+    let nav = document.querySelector('.nav')
+    let closeIcon = document.querySelector('.close-icon')
+    hamburger.addEventListener('click',function () {
+      nav.classList.toggle("hide")
+    })
+
+    closeIcon.addEventListener('click', () => {
+      nav.classList.add("hide")
+    })
+  </script>
+</body>
+</html>
